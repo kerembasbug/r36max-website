@@ -1,0 +1,237 @@
+.about-page {
+    padding-top: 70px;
+}
+
+/* Hero */
+.about-hero {
+    padding: var(--spacing-3xl) 0;
+    background: var(--gradient-hero);
+    text-align: center;
+}
+
+.about-hero h1 {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Story */
+.story-section {
+    background: var(--color-bg-primary);
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.story-text h2 {
+    margin-bottom: var(--spacing-lg);
+}
+
+.story-text p {
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-lg);
+}
+
+.story-image .image-placeholder {
+    aspect-ratio: 1;
+    border-radius: var(--radius-2xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+}
+
+.big-icon {
+    font-size: 5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Timeline */
+.timeline-section {
+    background: var(--color-bg-dark);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--gradient-primary);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-year {
+    flex: 0 0 50%;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary-light);
+}
+
+.timeline-content {
+    flex: 0 0 calc(50% - var(--spacing-xl));
+}
+
+.timeline-content h3 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.125rem;
+}
+
+.timeline-content p {
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+}
+
+/* Values */
+.values-section {
+    background: var(--color-bg-primary);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.value-card {
+    text-align: center;
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: var(--spacing-md);
+}
+
+.value-card h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.value-card p {
+    color: var(--color-text-secondary);
+    font-size: 0.9375rem;
+}
+
+/* Team */
+.team-section {
+    background: var(--color-bg-dark);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-avatar {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.team-card h3 {
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.125rem;
+}
+
+.team-card p {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+}
+
+/* CTA */
+.cta-section {
+    background: var(--color-bg-primary);
+}
+
+.cta-content {
+    text-align: center;
+    padding: var(--spacing-3xl);
+    border-radius: var(--radius-2xl);
+}
+
+.cta-content h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-content p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-xl);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .story-content {
+        grid-template-columns: 1fr;
+    }
+
+    .story-image {
+        order: -1;
+    }
+
+    .values-grid,
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(odd) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 60px;
+    }
+
+    .timeline-year {
+        flex: none;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .timeline-content {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .values-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
