@@ -1,9 +1,10 @@
 import './BlogPost.css';
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { blogPosts } from './Blog';
 
 // Blog post content data
-const blogContent: Record<string, { content: JSX.Element }> = {
+const blogContent: Record<string, { content: React.JSX.Element }> = {
     'r36-max-complete-review': {
         content: (
             <>
